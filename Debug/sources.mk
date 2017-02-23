@@ -11,6 +11,10 @@ EXECUTABLES :=
 OBJS := 
 C_DEPS := 
 
+CROSS := 
+CC := $(CROSS)gcc
+AR := $(CROSS)ar
+
 # Every subdirectory with source files must be described here
 SUBDIRS := \
 src/xmldsig \

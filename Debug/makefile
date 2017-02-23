@@ -34,13 +34,14 @@ all: OpenV2G.exe
 OpenV2G.exe: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: MinGW C Linker'
-	gcc  -o "OpenV2G.exe" $(OBJS) $(USER_OBJS) $(LIBS)
+	$(CC)  -o "OpenV2G.exe" $(OBJS) $(USER_OBJS) $(LIBS)
+	$(AR) rcs "libopenv2g.a" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) $(EXECUTABLES)$(OBJS)$(C_DEPS) OpenV2G.exe
+	-$(RM) $(EXECUTABLES)$(OBJS)$(C_DEPS) OpenV2G.exe libopenv2g.a
 	-@echo ' '
 
 .PHONY: all clean dependents
