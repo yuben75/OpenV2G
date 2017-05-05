@@ -232,6 +232,7 @@ static int appHandshake()
 
 	char* ns0 = "urn:iso:15118:2:2010:MsgDef";
 	char* ns1 = "urn:din:70121:2012:MsgDef";
+    int i;
 
 	stream1.size = BUFFER_SIZE;
 	stream1.data = buffer1;
@@ -285,6 +286,10 @@ static int appHandshake()
 				if(handshakeResp.supportedAppProtocolRes.ResponseCode == appHandresponseCodeType_OK_SuccessfulNegotiation) {
 					printf("\t\tResponseCode=OK_SuccessfulNegotiation\n");
 					printf("\t\tSchemaID=%d\n",handshakeResp.supportedAppProtocolRes.SchemaID);
+                    for (i=0; i<pos2; i++){
+                        printf("[%02x]", stream2.data[i]);
+                    }
+                    printf("\n");
 				}
 			}
 		}
@@ -1222,6 +1227,9 @@ static int ac_charging()
 {
 	int errn = 0;
 	int i, j;
+    uint8_t buf[1024];
+    uint16_t pos = 0;
+    bitstream_t stream;
 
 	struct v2gEXIDocument exiIn;
 	struct v2gEXIDocument exiOut;
@@ -1278,7 +1286,16 @@ static int ac_charging()
 			return errn;
 		}
 	}
-
+    stream.size = 1024;
+    stream.data = buf;
+    stream.pos  = &pos;
+    errn = serializeEXI2Stream(&exiOut, &stream);    
+    if(errn == 0) {
+        for (i=0; i<pos; i++){
+            printf("[%02x]", stream.data[i]);
+        }
+        printf("\n");
+    }
 
 	/*******************************************
 	 * serviceDiscovery *
