@@ -3,7 +3,7 @@
 
 cd /sitara/ti-sdk-am335x-evm/linux-devkit/
 . ./environment-setup
-cd /root/Desktop/80618_project/prj_external/OpenV2G/Release
+cd /root/Desktop/80618_project/OpenV2G/Release
 time colormake 
 
 #rm /media/sf_80618/tftp/pev
