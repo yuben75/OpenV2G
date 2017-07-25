@@ -24,7 +24,7 @@
  *
  *
  ********************************************************************/
-
+#define SIZE(ary)	(sizeof(ary)/sizeof(ary[0]))
 
 
 #include <stdio.h>
@@ -131,7 +131,13 @@ static void printBinaryArray(uint8_t* byte, uint16_t len) {
 	}
 	printf("\n");
 }
-
+static void printBinaryArray_hex(uint8_t* byte, uint16_t len) {
+	unsigned int i;
+	for(i=0; i<len; i++) {
+		printf("%02x ",byte[i]);
+	}
+	printf("\n");
+}
 static void copyBytes(uint8_t* from, uint16_t len, uint8_t* to) {
 	int i;
 	for(i=0; i<len; i++) {
@@ -183,10 +189,6 @@ static int appHandshakeHandler(bitstream_t* iStream, bitstream_t* oStream) {
 
 	}
 
-
-
-
-
 	printf("EVSE side: List of application handshake protocols of the EV \n");
 
 	for(i=0;i<exiDoc.supportedAppProtocolReq.AppProtocol.arrayLen;i++) {
@@ -199,12 +201,16 @@ static int appHandshakeHandler(bitstream_t* iStream, bitstream_t* oStream) {
 	}
 
 	/* prepare response handshake response:
-	 * it is assumed, we support the 15118 1.0 version :-) */
+	 * it is assumed, we support the 15118 1.0 version :-)
+	 dikey
+	 */
 	init_appHandEXIDocument(&appHandResp);
 	appHandResp.supportedAppProtocolRes_isUsed = 1u;
 	appHandResp.supportedAppProtocolRes.ResponseCode = appHandresponseCodeType_OK_SuccessfulNegotiation;
 	appHandResp.supportedAppProtocolRes.SchemaID = exiDoc.supportedAppProtocolReq.AppProtocol.array[0].SchemaID; /* signal the protocol by the provided schema id*/
 	appHandResp.supportedAppProtocolRes.SchemaID_isUsed = 1u;
+	/* appHandResp.supportedAppProtocolRes.SchemaID = "dikey"; signal the protocol by the provided schema id
+	appHandResp.supportedAppProtocolRes.SchemaID_isUsed = 6u;*/
 
 	*oStream->pos = V2GTP_HEADER_LENGTH;
 	if( (errn = encode_appHandExiDocument(oStream, &appHandResp)) == 0) {
@@ -286,10 +292,14 @@ static int appHandshake()
 				if(handshakeResp.supportedAppProtocolRes.ResponseCode == appHandresponseCodeType_OK_SuccessfulNegotiation) {
 					printf("\t\tResponseCode=OK_SuccessfulNegotiation\n");
 					printf("\t\tSchemaID=%d\n",handshakeResp.supportedAppProtocolRes.SchemaID);
+#if 1
+					printf("\t");
                     for (i=0; i<pos2; i++){
+                    	if ((i) && ((i%8)==0) )	printf("\r\t");
                         printf("[%02x]", stream2.data[i]);
                     }
                     printf("\n");
+#endif
 				}
 			}
 		}
@@ -1227,9 +1237,6 @@ static int ac_charging()
 {
 	int errn = 0;
 	int i, j;
-    uint8_t buf[1024];
-    uint16_t pos = 0;
-    bitstream_t stream;
 
 	struct v2gEXIDocument exiIn;
 	struct v2gEXIDocument exiOut;
@@ -1286,16 +1293,7 @@ static int ac_charging()
 			return errn;
 		}
 	}
-    stream.size = 1024;
-    stream.data = buf;
-    stream.pos  = &pos;
-    errn = serializeEXI2Stream(&exiOut, &stream);    
-    if(errn == 0) {
-        for (i=0; i<pos; i++){
-            printf("[%02x]", stream.data[i]);
-        }
-        printf("\n");
-    }
+
 
 	/*******************************************
 	 * serviceDiscovery *
@@ -1786,9 +1784,14 @@ static int ac_charging()
 static int dc_charging() {
 	int errn = 0;
 	int i, j;
+    uint8_t buf[1024];
+    uint16_t pos = 0;
+    bitstream_t stream;
 
 	struct v2gEXIDocument exiIn;
 	struct v2gEXIDocument exiOut;
+	struct v2gEXIDocument exiDoc;
+	struct v2gEXIDocument *pExi;
 
 	struct v2gServiceDiscoveryResType serviceDiscoveryRes;
 	struct v2gChargeParameterDiscoveryResType chargeParameterDiscoveryRes;
@@ -1846,9 +1849,86 @@ static int dc_charging() {
 			return errn;
 		}
 	}
+#if 1
+    stream.size = 1024;
+    stream.data = buf;
+    stream.pos  = &pos;
+    errn = serializeEXI2Stream(&exiOut, &stream);
+    if(errn == 0) {
+    	printf("\t");
+        for (i=0; i<pos; i++){
+        	if ( (i) && ((i%8)==0))	printf("\n\t");
+            printf("[%02x]", stream.data[i]);
+        }
+        printf("\n");
+    }
 
+	#if 1
+	{
+		#if 1
+		/* 	2016-04-19 033 4.txt
+		[11:31:678441] <DIN> <-- SessionSetupReq
+		SessionSetupReq data:
+				 SessionID=00 00 00 00 00 00 00 00
+				 EVCCID=04 65 65 00 00 c4
+		0000 01 FE 80 01 00 00 00 15 80 9A 02 00 00 00 00 00 ................
+		0010 00 00 00 11 D0 18 11 95 94 00 03 10 00          .............
+		*/
+		uint8_t buf1[] ={	0x01, 0xfe, 0x80, 0x01, 0x00, 0x00, 0x00, 0x15,
+							0x80, 0x98, 0x02, 0x00, 0x00, 0x00, 0x00, 0x00,
+							0x00, 0x00, 0x00, 0x11, 0xd0, 0x18, 0x11, 0x95,
+							0x94, 0x00, 0x03, 0x10, 0x00
+						};
+		#else
+		/*
+		uint8_t buf1[] ={	0x01, 0xfe, 0x80, 0x01, 0x00, 0x00, 0x00, 0x10,
+							0x80, 0x9a, 0x02, 0x00, 0x00, 0x00, 0x00, 0x00,
+							0x00, 0x00, 0x00, 0x11, 0xd0, 0x04, 0x50, 0x00
+						};*/
 
+		uint8_t buf1[] ={	0x01, 0xfe, 0x80, 0x01, 0x00, 0x00, 0x00, 0x10,
+							0x80, 0x98, 0x02, 0x00, 0x00, 0x00, 0x00, 0x00,
+							0x00, 0x00, 0x00, 0x11, 0xd0, 0x04, 0x50, 0x00,
+						};
 
+		/* 	I3 NoPowerDeliveryRes 8sec.txt
+		[32:03:021317] <DIN> <-- SessionSetupReq
+		SessionSetupReq data:
+				 SessionID=
+				 EVCCID=00 00 f0 7f 0c 00 22 5c
+		0000 01 FE 80 01 00 00 00 0F 80 9A 00 11 D0 20 00 03 ............. ..
+		0010 C1 FC 30 00 89 70 00                            ..0..p.
+		*/
+		#endif
+		memcpy(buf, buf1, SIZE(buf1));
+		printf( "%s:%i# B:dc_charging_req raw data print \n", __func__, __LINE__);
+		printBinaryArray_hex(buf, 64);
+    	printf("\t");
+        for (i=0; i<SIZE(buf1); i++){
+        	if ( (i) && ((i%8)==0))	printf("\n\t");
+            printf("[%02x]", buf[i]);
+        }
+        printf("\n");
+
+	}
+	#endif
+	pExi = &exiDoc;
+	errn = deserializeStream2EXI(&stream, pExi);
+	if ( errn < 0){
+		printf( "%s:%i# deserializeStream2EXI error: %i \n", __func__, __LINE__, errn);
+		return -1;
+	}
+
+	printf( "%s:%i# EVSE side: sessionSetup called : errn=%i\n", __func__, __LINE__, errn);
+	printf("\tReceived data:\n");
+	printf("\tHeader SessionID=");
+	printBinaryArray(pExi->V2G_Message.Header.SessionID.bytes, pExi->V2G_Message.Header.SessionID.bytesLen);
+	printf("\tEVCCIDLength=%i\n", pExi->V2G_Message.Body.SessionSetupReq.EVCCID.bytesLen);
+	printf("\tEVCCID=");
+	printBinaryArray_hex(pExi->V2G_Message.Body.SessionSetupReq.EVCCID.bytes, pExi->V2G_Message.Body.SessionSetupReq.EVCCID.bytesLen);
+
+	return errn;
+#endif
 
 	/*******************************************
 	 * serviceDiscovery *
@@ -2692,7 +2772,7 @@ int main_example(int argc, char *argv[]) {
 	getchar();
 #endif /* ASK_FOR_USER_INPUT */
 
-
+#if 0
 	printf("+++ Start V2G client / service example for AC charging +++\n\n");
 	errn = ac_charging();
 	printf("\n+++Terminate V2G Client / Service example for AC charging +++\n");
@@ -2702,7 +2782,7 @@ int main_example(int argc, char *argv[]) {
 		printf("\n\nAC_charging error %d!\n", errn);
 		return errn;
 	}
-
+#endif
 
 #if ASK_FOR_USER_INPUT != 0
 	printf("Please press enter for DC charging!\n");
