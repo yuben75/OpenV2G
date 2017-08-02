@@ -1,0 +1,345 @@
+# depslib dependency file v1.0
+1501631187 source:n:\svn\80618\openv2g\src\apphandshake\apphand_datadeserialization.c
+	"appHand_service.h"
+	"appHand_dataTypes.h"
+	"EXITypes.h"
+	"appHand_EXIDecoder.h"
+	"StringTable.h"
+	<string.h>
+
+1501631187 n:\svn\80618\openv2g\src\apphandshake\apphand_service.h
+	"appHand_dataTypes.h"
+
+1501631187 n:\svn\80618\openv2g\src\apphandshake\apphand_datatypes.h
+	"EXITypes.h"
+
+1501631187 n:\svn\80618\openv2g\src\codec\exitypes.h
+	<stdint.h>
+	<stdio.h>
+
+1501631187 n:\svn\80618\openv2g\src\codec\apphandcodec\apphand_exidecoder.h
+	"EXITypes.h"
+
+1501631187 n:\svn\80618\openv2g\src\codec\stringtable.h
+	"EXITypes.h"
+
+1501631187 source:n:\svn\80618\openv2g\src\apphandshake\apphand_dataserialization.c
+	"appHand_service.h"
+	"appHand_dataTypes.h"
+	"appHand_dataTypes.h"
+	"StringTable.h"
+	"EXITypes.h"
+	"appHand_EXIEncoder.h"
+	<string.h>
+
+1501631187 n:\svn\80618\openv2g\src\codec\apphandcodec\apphand_exiencoder.h
+	"EXITypes.h"
+
+1501631187 source:n:\svn\80618\openv2g\src\apphandshake\apphand_datatypes.c
+	"EXITypes.h"
+	"appHand_dataTypes.h"
+
+1501631187 source:n:\svn\80618\openv2g\src\codec\abstractdecoderchannel.c
+	"DecoderChannel.h"
+	"CoderChannel.h"
+	"BitInputStream.h"
+	"EXITypes.h"
+
+1501631187 n:\svn\80618\openv2g\src\codec\decoderchannel.h
+	"EXITypes.h"
+	"CoderChannel.h"
+
+1501631187 n:\svn\80618\openv2g\src\codec\coderchannel.h
+	"EXITypes.h"
+
+1501631187 n:\svn\80618\openv2g\src\codec\bitinputstream.h
+	"EXITypes.h"
+
+1501631187 source:n:\svn\80618\openv2g\src\codec\abstractencoderchannel.c
+	"EncoderChannel.h"
+	"CoderChannel.h"
+	"BitOutputStream.h"
+	"EXITypes.h"
+	"MethodsBag.h"
+
+1501631187 n:\svn\80618\openv2g\src\codec\encoderchannel.h
+	"EXITypes.h"
+
+1501631187 n:\svn\80618\openv2g\src\codec\bitoutputstream.h
+	<stdint.h>
+	"EXITypes.h"
+
+1501631187 n:\svn\80618\openv2g\src\codec\methodsbag.h
+	<stdio.h>
+	<stdint.h>
+	<string.h>
+	<stdlib.h>
+
+1501631187 source:n:\svn\80618\openv2g\src\codec\bitdecoderchannel.c
+	"DecoderChannel.h"
+	"BitInputStream.h"
+	"EXITypes.h"
+
+1501631187 source:n:\svn\80618\openv2g\src\codec\bitencoderchannel.c
+	"EncoderChannel.h"
+	"CoderChannel.h"
+	"BitOutputStream.h"
+	"EXITypes.h"
+
+1501631187 source:n:\svn\80618\openv2g\src\codec\bitinputstream.c
+	"EXITypes.h"
+	"BitInputStream.h"
+
+1501631187 source:n:\svn\80618\openv2g\src\codec\bitoutputstream.c
+	"EXITypes.h"
+	"BitOutputStream.h"
+
+1501631187 source:n:\svn\80618\openv2g\src\codec\bytedecoderchannel.c
+	"DecoderChannel.h"
+	"CoderChannel.h"
+	"BitInputStream.h"
+	"EXITypes.h"
+
+1501631187 source:n:\svn\80618\openv2g\src\codec\byteencoderchannel.c
+	"EncoderChannel.h"
+	"CoderChannel.h"
+	"BitOutputStream.h"
+	"EXITypes.h"
+	"MethodsBag.h"
+
+1501631187 source:n:\svn\80618\openv2g\src\codec\bytestream.c
+	"EXITypes.h"
+
+1501631187 source:n:\svn\80618\openv2g\src\codec\exicoder.c
+	"EXITypes.h"
+	"BitInputStream.h"
+	"DecoderChannel.h"
+	"EXICoder.h"
+
+1501631187 n:\svn\80618\openv2g\src\codec\exicoder.h
+	"EXITypes.h"
+
+1501631187 source:n:\svn\80618\openv2g\src\codec\exidecoder.c
+	"EXITypes.h"
+	"BitInputStream.h"
+	"DecoderChannel.h"
+	"CoderChannel.h"
+	"StringTable.h"
+	"NameTableEntries.h"
+	"MethodsBag.h"
+	"EXICoder.h"
+	"EXIHeaderDecoder.h"
+
+1501631187 n:\svn\80618\openv2g\src\codec\nametableentries.h
+	"EXITypes.h"
+
+1501631187 n:\svn\80618\openv2g\src\codec\exiheaderdecoder.h
+	"EXITypes.h"
+
+1501631187 source:n:\svn\80618\openv2g\src\codec\exiencoder.c
+	"EXITypes.h"
+	"BitOutputStream.h"
+	"EncoderChannel.h"
+	"StringTable.h"
+	"NameTableEntries.h"
+	"MethodsBag.h"
+	"EXICoder.h"
+	"EXIHeaderEncoder.h"
+
+1501631187 n:\svn\80618\openv2g\src\codec\exiheaderencoder.h
+	"EXITypes.h"
+
+1501631187 source:n:\svn\80618\openv2g\src\codec\exiheaderdecoder.c
+	"EXIHeaderDecoder.h"
+	"BitInputStream.h"
+	"DecoderChannel.h"
+
+1501631187 source:n:\svn\80618\openv2g\src\codec\exiheaderencoder.c
+	"EXIHeaderEncoder.h"
+	"BitOutputStream.h"
+	"EncoderChannel.h"
+
+1501631187 source:n:\svn\80618\openv2g\src\codec\methodsbag.c
+	"MethodsBag.h"
+	"EXITypes.h"
+
+1501631187 source:n:\svn\80618\openv2g\src\codec\nametableentries.c
+	"NameTableEntries.h"
+
+1501631187 source:n:\svn\80618\openv2g\src\codec\stringtable.c
+	<string.h>
+	"StringTable.h"
+	"NameTableEntries.h"
+
+1501631187 source:n:\svn\80618\openv2g\src\codec\ucsstring.c
+	<string.h>
+	"DecoderChannel.h"
+	"BitInputStream.h"
+	"EXITypes.h"
+
+1501631187 source:n:\svn\80618\openv2g\src\codec\apphandcodec\apphand_exidecoder.c
+	"EXITypes.h"
+	"BitInputStream.h"
+	"DecoderChannel.h"
+	"CoderChannel.h"
+	"StringTable.h"
+	"appHand_NameTableEntries.h"
+	"MethodsBag.h"
+	"EXICoder.h"
+	"EXIHeaderDecoder.h"
+
+1501631187 n:\svn\80618\openv2g\src\codec\apphandcodec\apphand_nametableentries.h
+	"EXITypes.h"
+
+1501631187 source:n:\svn\80618\openv2g\src\codec\apphandcodec\apphand_exiencoder.c
+	"EXITypes.h"
+	"BitOutputStream.h"
+	"EncoderChannel.h"
+	"StringTable.h"
+	"appHand_NameTableEntries.h"
+	"MethodsBag.h"
+	"EXICoder.h"
+	"EXIHeaderEncoder.h"
+
+1501631187 source:n:\svn\80618\openv2g\src\codec\apphandcodec\apphand_nametableentries.c
+	"appHand_NameTableEntries.h"
+
+1501631187 source:n:\svn\80618\openv2g\src\service\v2g_serviceclientstubs.c
+	"v2g_serviceDataTypes.h"
+	"v2g_serviceDataTypes.c"
+	"v2g_serviceClientStubs.h"
+	"v2g_serviceDataSerialization.c"
+	"v2g_serviceClientDataTransmitter.h"
+	"EXITypes.h"
+	"EXIDecoder.h"
+	"EXIEncoder.h"
+	"StringTable.h"
+
+1501631187 n:\svn\80618\openv2g\src\service\v2g_servicedatatypes.h
+	"EXITypes.h"
+
+1501631187 n:\svn\80618\openv2g\src\service\v2g_servicedatatypes.c
+	"EXITypes.h"
+	"v2g_serviceDataTypes.h"
+
+1501631187 n:\svn\80618\openv2g\src\service\v2g_serviceclientstubs.h
+	"v2g_service.h"
+	"v2g_serviceDataTypes.h"
+	"v2g_serviceClientStubs.h"
+
+1501631187 n:\svn\80618\openv2g\src\service\v2g_service.h
+	"v2g_serviceDataTypes.h"
+	"EXITypes.h"
+
+1501631187 n:\svn\80618\openv2g\src\service\v2g_servicedataserialization.c
+	"v2g_service.h"
+	"v2g_serviceDataTypes.h"
+	"EXITypes.h"
+	"EXIEncoder.h"
+	<string.h>
+
+1501631187 n:\svn\80618\openv2g\src\codec\exiencoder.h
+	"EXITypes.h"
+
+1501631187 n:\svn\80618\openv2g\src\service\v2g_serviceclientdatatransmitter.h
+	"EXITypes.h"
+
+1501631187 n:\svn\80618\openv2g\src\codec\exidecoder.h
+	"EXITypes.h"
+
+1501631187 source:n:\svn\80618\openv2g\src\service\v2g_servicedataserialization.c
+	"v2g_service.h"
+	"v2g_serviceDataTypes.h"
+	"EXITypes.h"
+	"EXIEncoder.h"
+	<string.h>
+
+1501631187 source:n:\svn\80618\openv2g\src\service\v2g_servicedatatypes.c
+	"EXITypes.h"
+	"v2g_serviceDataTypes.h"
+
+1501631187 source:n:\svn\80618\openv2g\src\service\v2g_servicedispatcher.c
+	"v2g_service.h"
+	"v2g_serviceDispatcher.h"
+	"v2g_serviceDataTypes.h"
+	"v2g_serviceDataTypes.c"
+	"v2g_serviceMethods.h"
+	"v2g_serviceDataSerialization.c"
+	"EXITypes.h"
+	"EXIDecoder.h"
+	"EXIEncoder.h"
+	"StringTable.h"
+	<string.h>
+
+1501631187 n:\svn\80618\openv2g\src\service\v2g_servicedispatcher.h
+	"v2g_serviceDataTypes.h"
+
+1501631187 n:\svn\80618\openv2g\src\service\v2g_servicemethods.h
+	"v2g_serviceDataTypes.h"
+	"EXITypes.h"
+
+1501631187 source:n:\svn\80618\openv2g\src\test\evse_server.c
+	"appHand_service.h"
+	"appHand_dataTypes.h"
+	"evse_server.h"
+	"v2g_service.h"
+	"v2g_serviceDispatcher.h"
+	"v2gtp.h"
+
+1501631187 n:\svn\80618\openv2g\src\test\evse_server.h
+	"EXITypes.h"
+
+1501631187 n:\svn\80618\openv2g\src\transport\v2gtp.h
+
+1501631187 source:n:\svn\80618\openv2g\src\test\evse_servicemethods.c
+	"v2g_serviceMethods.h"
+	"v2g_serviceDataTypes.h"
+	<stdio.h>
+
+1501631187 source:n:\svn\80618\openv2g\src\test\main.c
+	<stdio.h>
+	<stdlib.h>
+	"main.h"
+
+1501631187 n:\svn\80618\openv2g\src\test\main.h
+
+1501631187 source:n:\svn\80618\openv2g\src\test\main_codec.c
+	<stdio.h>
+	<stdlib.h>
+	"EXIDecoder.h"
+	"StringTable.h"
+	"EXIEncoder.h"
+	"EXITypes.h"
+	"ByteStream.h"
+
+1501631187 n:\svn\80618\openv2g\src\codec\bytestream.h
+	"EXITypes.h"
+
+1501632139 source:n:\svn\80618\openv2g\src\test\pev_service.c
+	"v2g_service.h"
+	"v2g_serviceDataTypes.h"
+	"v2g_serviceClientStubs.h"
+	"EXITypes.h"
+	"appHand_service.h"
+	"appHand_dataTypes.h"
+	"v2gtp.h"
+	"v2g_serviceClientDataTransmitter.h"
+	<stdio.h>
+
+1501631187 n:\svn\80618\openv2g\src\test\v2g_serviceclientdatatransmitter.h
+	"EXITypes.h"
+
+1501631187 source:n:\svn\80618\openv2g\src\test\serviceclientdatatransmitter.c
+	"v2g_serviceClientDataTransmitter.h"
+	"evse_server.h"
+	"v2gtp.h"
+
+1501631187 source:n:\svn\80618\openv2g\src\transport\v2gtp.c
+	<stdint.h>
+	<stdlib.h>
+	<stdint.h>
+	<stdio.h>
+	<math.h>
+	<string.h>
+	"v2gtp.h"
+
