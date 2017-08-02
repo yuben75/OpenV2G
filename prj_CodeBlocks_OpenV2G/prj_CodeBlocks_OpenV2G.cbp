@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="prj_CodeBlocks_OpenV2G" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin\Debug\prj_CodeBlocks_OpenV2G" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj\Debug\" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="..\src\appHandshake" />
+					<Add directory="..\src\codec" />
+					<Add directory="..\src\codec\appHandCodec" />
+					<Add directory="..\src\service" />
+					<Add directory="..\src\test" />
+					<Add directory="..\src\transport" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin\Release\prj_CodeBlocks_OpenV2G" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj\Release\" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="..\src\appHandshake\appHand_DataDeserialization.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\src\appHandshake\appHand_DataSerialization.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\src\appHandshake\appHand_dataTypes.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\src\appHandshake\appHand_dataTypes.h" />
+		<Unit filename="..\src\appHandshake\appHand_service.h" />
+		<Unit filename="..\src\codec\AbstractDecoderChannel.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\src\codec\AbstractEncoderChannel.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\src\codec\BitDecoderChannel.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\src\codec\BitEncoderChannel.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\src\codec\BitInputStream.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\src\codec\BitInputStream.h" />
+		<Unit filename="..\src\codec\BitOutputStream.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\src\codec\BitOutputStream.h" />
+		<Unit filename="..\src\codec\ByteDecoderChannel.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\src\codec\ByteEncoderChannel.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\src\codec\ByteStream.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\src\codec\ByteStream.h" />
+		<Unit filename="..\src\codec\CoderChannel.h" />
+		<Unit filename="..\src\codec\DecoderChannel.h" />
+		<Unit filename="..\src\codec\EXICoder.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\src\codec\EXICoder.h" />
+		<Unit filename="..\src\codec\EXIDecoder.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\src\codec\EXIDecoder.h" />
+		<Unit filename="..\src\codec\EXIEncoder.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\src\codec\EXIEncoder.h" />
+		<Unit filename="..\src\codec\EXIHeaderDecoder.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\src\codec\EXIHeaderDecoder.h" />
+		<Unit filename="..\src\codec\EXIHeaderEncoder.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\src\codec\EXIHeaderEncoder.h" />
+		<Unit filename="..\src\codec\EXITypes.h" />
+		<Unit filename="..\src\codec\EncoderChannel.h" />
+		<Unit filename="..\src\codec\MethodsBag.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\src\codec\MethodsBag.h" />
+		<Unit filename="..\src\codec\NameTableEntries.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\src\codec\NameTableEntries.h" />
+		<Unit filename="..\src\codec\StringTable.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\src\codec\StringTable.h" />
+		<Unit filename="..\src\codec\UCSString.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\src\codec\UCSString.h" />
+		<Unit filename="..\src\codec\appHandCodec\appHand_EXIDecoder.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\src\codec\appHandCodec\appHand_EXIDecoder.h" />
+		<Unit filename="..\src\codec\appHandCodec\appHand_EXIEncoder.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\src\codec\appHandCodec\appHand_EXIEncoder.h" />
+		<Unit filename="..\src\codec\appHandCodec\appHand_NameTableEntries.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\src\codec\appHandCodec\appHand_NameTableEntries.h" />
+		<Unit filename="..\src\service\v2g_service.h" />
+		<Unit filename="..\src\service\v2g_serviceClientDataTransmitter.h" />
+		<Unit filename="..\src\service\v2g_serviceClientStubs.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\src\service\v2g_serviceClientStubs.h" />
+		<Unit filename="..\src\service\v2g_serviceDataSerialization.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\src\service\v2g_serviceDataTypes.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\src\service\v2g_serviceDataTypes.h" />
+		<Unit filename="..\src\service\v2g_serviceDispatcher.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\src\service\v2g_serviceDispatcher.h" />
+		<Unit filename="..\src\service\v2g_serviceMethods.h" />
+		<Unit filename="..\src\test\evse_server.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\src\test\evse_server.h" />
+		<Unit filename="..\src\test\evse_serviceMethods.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\src\test\main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\src\test\main.h" />
+		<Unit filename="..\src\test\main_codec.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\src\test\pev_service.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\src\test\serviceClientDataTransmitter.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\src\test\v2g_serviceClientDataTransmitter.h" />
+		<Unit filename="..\src\transport\v2gtp.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\src\transport\v2gtp.h" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

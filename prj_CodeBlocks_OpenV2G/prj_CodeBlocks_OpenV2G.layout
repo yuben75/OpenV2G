@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<ActiveTarget name="Debug" />
+	<File name="..\src\appHandshake\appHand_DataDeserialization.c" open="1" top="0" tabpos="1">
+		<Cursor position="6389" topLine="230" />
+	</File>
+	<File name="..\src\appHandshake\appHand_DataSerialization.c" open="0" top="0" tabpos="0">
+		<Cursor position="9641" topLine="368" />
+	</File>
+	<File name="..\src\service\v2g_serviceClientStubs.c" open="1" top="0" tabpos="4">
+		<Cursor position="5690" topLine="200" />
+	</File>
+	<File name="..\src\service\v2g_serviceDispatcher.c" open="1" top="0" tabpos="3">
+		<Cursor position="88053" topLine="2473" />
+	</File>
+	<File name="..\src\test\main.c" open="1" top="0" tabpos="5">
+		<Cursor position="1397" topLine="0" />
+	</File>
+	<File name="..\src\test\main_codec.c" open="1" top="0" tabpos="2">
+		<Cursor position="4664" topLine="135" />
+	</File>
+	<File name="..\src\test\pev_service.c" open="1" top="1" tabpos="6">
+		<Cursor position="27916" topLine="770" />
+	</File>
+</CodeBlocks_layout_file>
