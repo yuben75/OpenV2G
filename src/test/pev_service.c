@@ -56,6 +56,7 @@ static void printDCEVSEStatus(struct DC_EVSEStatusType* status);
 static void printACEVSEStatus(struct AC_EVSEStatusType* status);
 static void printASCIIString(uint32_t* string, uint32_t len);
 static void printBinaryArray(uint8_t* byte, uint32_t len);
+static void printBinaryArray_hex(uint8_t* byte, uint16_t len) ;
 static int writeStringToEXIString(char* string, uint32_t* exiString);
 
 
@@ -773,8 +774,13 @@ static int dc_charging()
 	v2gHeader.isused.Signature=0; /* no security */
 
 	/* setup sessionSetup parameter */
-	sessionSetup.EVCCID.data[0]=10;
-	sessionSetup.EVCCID.arraylen.data=1;
+	sessionSetup.EVCCID.data[0]=0x04;
+    sessionSetup.EVCCID.data[1]=0x65;
+    sessionSetup.EVCCID.data[2]=0x65;
+    sessionSetup.EVCCID.data[3]=0x00;
+    sessionSetup.EVCCID.data[4]=0x00;
+    sessionSetup.EVCCID.data[5]=0xc4;
+	sessionSetup.EVCCID.arraylen.data=6;
 
 	printf("EV side: prepare EVSE sessionSetup\n");
 
@@ -792,6 +798,12 @@ static int dc_charging()
 	 * */
 
 	serviceDataTransmitter(outStream, outPayloadLength, inStream);
+    printf("sessionSetup outStream\n ");
+    printBinaryArray_hex(outStream, 32);
+
+    printf("sessionSetup inStream\n ");
+    printBinaryArray_hex(inStream, 32);
+
 
 	/* this methods deserialize the response EXI stream */
 	if(determineResponseMesssage(&service, &resMsg))
@@ -1486,7 +1498,7 @@ int main_service()
 	printf("+++ Start application handshake protocol example +++\n\n");
 
 	appHandshake();
-
+	/*
 	printf("+++ Terminate application handshake protocol example +++\n\n");
 
 	printf("\n\nPlease press enter for AC charging!\n");
@@ -1497,6 +1509,7 @@ int main_service()
 	ac_charging();
 
 	printf("\n+++Terminate V2G Client / Service example for AC charging +++\n");
+	*/
 	printf("Please press enter for DC charging!\n");
 	fflush(stdout);
 	getchar();
@@ -1569,6 +1582,14 @@ static void printBinaryArray(uint8_t* byte, uint32_t len) {
 	unsigned int i;
 	for(i=0; i<len; i++) {
 		printf("%d ",byte[i]);
+	}
+	printf("\n");
+}
+
+static void printBinaryArray_hex(uint8_t* byte, uint16_t len) {
+	unsigned int i;
+	for(i=0; i<len; i++) {
+		printf("%02x ",byte[i]);
 	}
 	printf("\n");
 }
