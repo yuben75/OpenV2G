@@ -1,0 +1,295 @@
+# depslib dependency file v1.0
+1500982140 source:/root/Desktop/80618_project/OpenV2G/src/appHandshake/appHandEXIDatatypes.c
+	<stdint.h>
+	"appHandEXIDatatypes.h"
+	"EXITypes.h"
+
+1500982140 /root/Desktop/80618_project/OpenV2G/src/appHandshake/appHandEXIDatatypes.h
+	<stdint.h>
+	"EXITypes.h"
+
+1500982140 /root/Desktop/80618_project/OpenV2G/src/codec/EXITypes.h
+	<stdint.h>
+	"EXIConfig.h"
+	<stdio.h>
+
+1500982140 /root/Desktop/80618_project/OpenV2G/src/codec/EXIConfig.h
+
+1500982140 source:/root/Desktop/80618_project/OpenV2G/src/appHandshake/appHandEXIDatatypesDecoder.c
+	"appHandEXIDatatypesDecoder.h"
+	"DecoderChannel.h"
+	"EXIHeaderDecoder.h"
+	"appHandEXIDatatypes.h"
+	"ErrorCodes.h"
+
+1500982140 /root/Desktop/80618_project/OpenV2G/src/appHandshake/appHandEXIDatatypesDecoder.h
+	<stdint.h>
+	"EXITypes.h"
+	"appHandEXIDatatypes.h"
+
+1500982140 /root/Desktop/80618_project/OpenV2G/src/codec/DecoderChannel.h
+	"EXIOptions.h"
+	"EXITypes.h"
+
+1500982140 /root/Desktop/80618_project/OpenV2G/src/codec/EXIOptions.h
+
+1500982140 /root/Desktop/80618_project/OpenV2G/src/codec/EXIHeaderDecoder.h
+	"EXITypes.h"
+
+1500982140 /root/Desktop/80618_project/OpenV2G/src/codec/ErrorCodes.h
+
+1500982140 source:/root/Desktop/80618_project/OpenV2G/src/appHandshake/appHandEXIDatatypesEncoder.c
+	"appHandEXIDatatypesEncoder.h"
+	"EncoderChannel.h"
+	"EXIHeaderEncoder.h"
+	"appHandEXIDatatypes.h"
+	"ErrorCodes.h"
+
+1500982140 /root/Desktop/80618_project/OpenV2G/src/appHandshake/appHandEXIDatatypesEncoder.h
+	<stdint.h>
+	"EXITypes.h"
+	"appHandEXIDatatypes.h"
+
+1500982140 /root/Desktop/80618_project/OpenV2G/src/codec/EncoderChannel.h
+	"EXITypes.h"
+
+1500982140 /root/Desktop/80618_project/OpenV2G/src/codec/EXIHeaderEncoder.h
+	"EXITypes.h"
+
+1500982140 source:/root/Desktop/80618_project/OpenV2G/src/codec/AbstractDecoderChannel.c
+	"DecoderChannel.h"
+	"EXIConfig.h"
+	"EXIOptions.h"
+	"BitInputStream.h"
+	"EXITypes.h"
+	"MethodsBag.h"
+	"ErrorCodes.h"
+	"DynamicMemory.h"
+
+1500982140 /root/Desktop/80618_project/OpenV2G/src/codec/BitInputStream.h
+	"EXITypes.h"
+
+1500982140 /root/Desktop/80618_project/OpenV2G/src/codec/MethodsBag.h
+	<stdint.h>
+
+1500982140 source:/root/Desktop/80618_project/OpenV2G/src/codec/AbstractEncoderChannel.c
+	"EncoderChannel.h"
+	"EXIOptions.h"
+	"BitOutputStream.h"
+	"EXITypes.h"
+	"ErrorCodes.h"
+	"MethodsBag.h"
+
+1500982140 /root/Desktop/80618_project/OpenV2G/src/codec/BitOutputStream.h
+	<stdint.h>
+	"EXITypes.h"
+
+1500982140 source:/root/Desktop/80618_project/OpenV2G/src/codec/BitDecoderChannel.c
+	"DecoderChannel.h"
+	"BitInputStream.h"
+	"EXITypes.h"
+	"ErrorCodes.h"
+
+1500982140 source:/root/Desktop/80618_project/OpenV2G/src/codec/BitEncoderChannel.c
+	"EncoderChannel.h"
+	"EXIOptions.h"
+	"BitOutputStream.h"
+	"EXITypes.h"
+
+1500982140 source:/root/Desktop/80618_project/OpenV2G/src/codec/BitInputStream.c
+	"BitInputStream.h"
+	"EXIConfig.h"
+	"EXITypes.h"
+	"ErrorCodes.h"
+
+1500982140 source:/root/Desktop/80618_project/OpenV2G/src/codec/BitOutputStream.c
+	"BitOutputStream.h"
+	"EXIConfig.h"
+	"EXITypes.h"
+	"ErrorCodes.h"
+
+1500982140 source:/root/Desktop/80618_project/OpenV2G/src/codec/ByteDecoderChannel.c
+	"DecoderChannel.h"
+	"EXIOptions.h"
+	"BitInputStream.h"
+	"EXITypes.h"
+	"ErrorCodes.h"
+
+1500982140 source:/root/Desktop/80618_project/OpenV2G/src/codec/ByteEncoderChannel.c
+	"EncoderChannel.h"
+	"EXIOptions.h"
+	"BitOutputStream.h"
+	"EXITypes.h"
+	"MethodsBag.h"
+	"ErrorCodes.h"
+
+1500982140 source:/root/Desktop/80618_project/OpenV2G/src/codec/ByteStream.c
+	<stdio.h>
+	"EXITypes.h"
+	"ErrorCodes.h"
+
+1500982140 source:/root/Desktop/80618_project/OpenV2G/src/codec/EXIHeaderDecoder.c
+	"EXIHeaderDecoder.h"
+	"BitInputStream.h"
+	"DecoderChannel.h"
+	"ErrorCodes.h"
+
+1500982140 source:/root/Desktop/80618_project/OpenV2G/src/codec/EXIHeaderEncoder.c
+	"EXIHeaderEncoder.h"
+	"BitOutputStream.h"
+	"EncoderChannel.h"
+
+1500982140 source:/root/Desktop/80618_project/OpenV2G/src/codec/MethodsBag.c
+	"MethodsBag.h"
+	"ErrorCodes.h"
+
+1500982140 source:/root/Desktop/80618_project/OpenV2G/src/codec/v2gEXIDatatypes.c
+	<stdint.h>
+	"v2gEXIDatatypes.h"
+	"EXITypes.h"
+
+1500982140 /root/Desktop/80618_project/OpenV2G/src/codec/v2gEXIDatatypes.h
+	<stdint.h>
+	"EXITypes.h"
+
+1500982140 source:/root/Desktop/80618_project/OpenV2G/src/codec/v2gEXIDatatypesDecoder.c
+	"v2gEXIDatatypesDecoder.h"
+	"DecoderChannel.h"
+	"EXIHeaderDecoder.h"
+	"v2gEXIDatatypes.h"
+	"ErrorCodes.h"
+
+1500982140 /root/Desktop/80618_project/OpenV2G/src/codec/v2gEXIDatatypesDecoder.h
+	<stdint.h>
+	"EXITypes.h"
+	"v2gEXIDatatypes.h"
+
+1500982140 source:/root/Desktop/80618_project/OpenV2G/src/codec/v2gEXIDatatypesEncoder.c
+	"v2gEXIDatatypesEncoder.h"
+	"EncoderChannel.h"
+	"EXIHeaderEncoder.h"
+	"v2gEXIDatatypes.h"
+	"ErrorCodes.h"
+
+1500982140 /root/Desktop/80618_project/OpenV2G/src/codec/v2gEXIDatatypesEncoder.h
+	<stdint.h>
+	"EXITypes.h"
+	"v2gEXIDatatypes.h"
+
+1500982140 source:/root/Desktop/80618_project/OpenV2G/src/din/dinEXIDatatypes.c
+	<stdint.h>
+	"dinEXIDatatypes.h"
+	"EXITypes.h"
+
+1500982140 /root/Desktop/80618_project/OpenV2G/src/din/dinEXIDatatypes.h
+	<stdint.h>
+	"EXITypes.h"
+
+1500982140 source:/root/Desktop/80618_project/OpenV2G/src/din/dinEXIDatatypesDecoder.c
+	"dinEXIDatatypesDecoder.h"
+	"DecoderChannel.h"
+	"EXIHeaderDecoder.h"
+	"dinEXIDatatypes.h"
+	"ErrorCodes.h"
+
+1500982140 /root/Desktop/80618_project/OpenV2G/src/din/dinEXIDatatypesDecoder.h
+	<stdint.h>
+	"EXITypes.h"
+	"dinEXIDatatypes.h"
+
+1500982140 source:/root/Desktop/80618_project/OpenV2G/src/din/dinEXIDatatypesEncoder.c
+	"dinEXIDatatypesEncoder.h"
+	"EncoderChannel.h"
+	"EXIHeaderEncoder.h"
+	"dinEXIDatatypes.h"
+	"ErrorCodes.h"
+
+1500982140 /root/Desktop/80618_project/OpenV2G/src/din/dinEXIDatatypesEncoder.h
+	<stdint.h>
+	"EXITypes.h"
+	"dinEXIDatatypes.h"
+
+1500982140 source:/root/Desktop/80618_project/OpenV2G/src/test/main.c
+	<stdio.h>
+	<stdlib.h>
+	"main.h"
+
+1500982140 /root/Desktop/80618_project/OpenV2G/src/test/main.h
+
+1500982140 source:/root/Desktop/80618_project/OpenV2G/src/test/main_databinder.c
+	<stdio.h>
+	<stdarg.h>
+	<stdlib.h>
+	"v2gEXIDatatypes.h"
+	"v2gEXIDatatypesEncoder.h"
+	"v2gEXIDatatypesDecoder.h"
+	"ByteStream.h"
+
+1500982140 /root/Desktop/80618_project/OpenV2G/src/codec/ByteStream.h
+	"EXITypes.h"
+
+1501118361 source:/root/Desktop/80618_project/OpenV2G/src/test/main_example.c
+	<stdio.h>
+	<stdarg.h>
+	<stdlib.h>
+	<string.h>
+	"EXITypes.h"
+	"appHandEXIDatatypes.h"
+	"appHandEXIDatatypesEncoder.h"
+	"appHandEXIDatatypesDecoder.h"
+	"dinEXIDatatypes.h"
+	"dinEXIDatatypesEncoder.h"
+	"dinEXIDatatypesDecoder.h"
+	"xmldsigEXIDatatypes.h"
+	"xmldsigEXIDatatypesEncoder.h"
+	"xmldsigEXIDatatypesDecoder.h"
+	"v2gEXIDatatypes.h"
+	"v2gEXIDatatypesEncoder.h"
+	"v2gEXIDatatypesDecoder.h"
+	"v2gtp.h"
+
+1500982140 /root/Desktop/80618_project/OpenV2G/src/xmldsig/xmldsigEXIDatatypes.h
+	<stdint.h>
+	"EXITypes.h"
+
+1500982140 /root/Desktop/80618_project/OpenV2G/src/xmldsig/xmldsigEXIDatatypesEncoder.h
+	<stdint.h>
+	"EXITypes.h"
+	"xmldsigEXIDatatypes.h"
+
+1500982140 /root/Desktop/80618_project/OpenV2G/src/xmldsig/xmldsigEXIDatatypesDecoder.h
+	<stdint.h>
+	"EXITypes.h"
+	"xmldsigEXIDatatypes.h"
+
+1500982140 /root/Desktop/80618_project/OpenV2G/src/transport/v2gtp.h
+	<stdint.h>
+
+1500982140 source:/root/Desktop/80618_project/OpenV2G/src/transport/v2gtp.c
+	<stdint.h>
+	<stdlib.h>
+	<stdint.h>
+	<stdio.h>
+	<math.h>
+	<string.h>
+	"v2gtp.h"
+
+1500982140 source:/root/Desktop/80618_project/OpenV2G/src/xmldsig/xmldsigEXIDatatypes.c
+	<stdint.h>
+	"xmldsigEXIDatatypes.h"
+	"EXITypes.h"
+
+1500982140 source:/root/Desktop/80618_project/OpenV2G/src/xmldsig/xmldsigEXIDatatypesDecoder.c
+	"xmldsigEXIDatatypesDecoder.h"
+	"DecoderChannel.h"
+	"EXIHeaderDecoder.h"
+	"xmldsigEXIDatatypes.h"
+	"ErrorCodes.h"
+
+1500982140 source:/root/Desktop/80618_project/OpenV2G/src/xmldsig/xmldsigEXIDatatypesEncoder.c
+	"xmldsigEXIDatatypesEncoder.h"
+	"EncoderChannel.h"
+	"EXIHeaderEncoder.h"
+	"xmldsigEXIDatatypes.h"
+	"ErrorCodes.h"
+

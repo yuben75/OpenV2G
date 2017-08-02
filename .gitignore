@@ -13,6 +13,8 @@
 *.o
 *.o.*
 *.d
+prj_CodeBlocks_OpenV2G/bin
+prj_CodeBlocks_OpenV2G/obj
 
 
 

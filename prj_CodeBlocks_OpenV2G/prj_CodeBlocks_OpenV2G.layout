@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<ActiveTarget name="Debug" />
+	<File name="../src/appHandshake/appHandEXIDatatypesDecoder.c" open="0" top="0" tabpos="0">
+		<Cursor position="28113" topLine="849" />
+	</File>
+	<File name="../src/appHandshake/appHandEXIDatatypesEncoder.c" open="0" top="0" tabpos="0">
+		<Cursor position="2155" topLine="29" />
+	</File>
+	<File name="../src/codec/BitDecoderChannel.c" open="0" top="0" tabpos="0">
+		<Cursor position="1658" topLine="26" />
+	</File>
+	<File name="../src/codec/v2gEXIDatatypes.c" open="0" top="0" tabpos="1">
+		<Cursor position="1223" topLine="18" />
+	</File>
+	<File name="../src/codec/v2gEXIDatatypes.h" open="0" top="0" tabpos="3">
+		<Cursor position="187969" topLine="2045" />
+	</File>
+	<File name="../src/codec/v2gEXIDatatypesDecoder.c" open="0" top="0" tabpos="3">
+		<Cursor position="644281" topLine="17210" />
+	</File>
+	<File name="../src/codec/v2gEXIDatatypesEncoder.c" open="0" top="0" tabpos="4">
+		<Cursor position="500295" topLine="12571" />
+	</File>
+	<File name="../src/din/dinEXIDatatypes.c" open="0" top="0" tabpos="0">
+		<Cursor position="1183" topLine="15" />
+	</File>
+	<File name="../src/din/dinEXIDatatypes.h" open="0" top="0" tabpos="2">
+		<Cursor position="1372" topLine="69" />
+	</File>
+	<File name="../src/din/dinEXIDatatypesDecoder.c" open="0" top="0" tabpos="5">
+		<Cursor position="500385" topLine="14002" />
+	</File>
+	<File name="../src/din/dinEXIDatatypesDecoder.h" open="0" top="0" tabpos="0">
+		<Cursor position="1374" topLine="13" />
+	</File>
+	<File name="../src/test/main_example.c" open="0" top="0" tabpos="1">
+		<Cursor position="73617" topLine="1247" />
+	</File>
+</CodeBlocks_layout_file>

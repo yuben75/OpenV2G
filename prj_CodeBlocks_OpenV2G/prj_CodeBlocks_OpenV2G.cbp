@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="prj_CodeBlocks_OpenV2G" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/prj_CodeBlocks_OpenV2G" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="../src/appHandshake" />
+					<Add directory="../src/codec" />
+					<Add directory="../src/din" />
+					<Add directory="../src/test" />
+					<Add directory="../src/transport" />
+					<Add directory="../src/xmldsig" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/prj_CodeBlocks_OpenV2G" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="../src/appHandshake/appHandEXIDatatypes.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/appHandshake/appHandEXIDatatypes.h" />
+		<Unit filename="../src/appHandshake/appHandEXIDatatypesDecoder.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/appHandshake/appHandEXIDatatypesDecoder.h" />
+		<Unit filename="../src/appHandshake/appHandEXIDatatypesEncoder.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/appHandshake/appHandEXIDatatypesEncoder.h" />
+		<Unit filename="../src/codec/AbstractDecoderChannel.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/codec/AbstractEncoderChannel.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/codec/BitDecoderChannel.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/codec/BitEncoderChannel.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/codec/BitInputStream.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/codec/BitInputStream.h" />
+		<Unit filename="../src/codec/BitOutputStream.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/codec/BitOutputStream.h" />
+		<Unit filename="../src/codec/ByteDecoderChannel.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/codec/ByteEncoderChannel.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/codec/ByteStream.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/codec/ByteStream.h" />
+		<Unit filename="../src/codec/DecoderChannel.h" />
+		<Unit filename="../src/codec/EXIConfig.h" />
+		<Unit filename="../src/codec/EXIHeaderDecoder.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/codec/EXIHeaderDecoder.h" />
+		<Unit filename="../src/codec/EXIHeaderEncoder.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/codec/EXIHeaderEncoder.h" />
+		<Unit filename="../src/codec/EXIOptions.h" />
+		<Unit filename="../src/codec/EXITypes.h" />
+		<Unit filename="../src/codec/EncoderChannel.h" />
+		<Unit filename="../src/codec/ErrorCodes.h" />
+		<Unit filename="../src/codec/MethodsBag.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/codec/MethodsBag.h" />
+		<Unit filename="../src/codec/v2gEXIDatatypes.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/codec/v2gEXIDatatypes.h" />
+		<Unit filename="../src/codec/v2gEXIDatatypesDecoder.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/codec/v2gEXIDatatypesDecoder.h" />
+		<Unit filename="../src/codec/v2gEXIDatatypesEncoder.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/codec/v2gEXIDatatypesEncoder.h" />
+		<Unit filename="../src/din/dinEXIDatatypes.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/din/dinEXIDatatypes.h" />
+		<Unit filename="../src/din/dinEXIDatatypesDecoder.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/din/dinEXIDatatypesDecoder.h" />
+		<Unit filename="../src/din/dinEXIDatatypesEncoder.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/din/dinEXIDatatypesEncoder.h" />
+		<Unit filename="../src/test/main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/test/main.h" />
+		<Unit filename="../src/test/main_databinder.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/test/main_example.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/transport/v2gtp.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/transport/v2gtp.h" />
+		<Unit filename="../src/xmldsig/xmldsigEXIDatatypes.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/xmldsig/xmldsigEXIDatatypes.h" />
+		<Unit filename="../src/xmldsig/xmldsigEXIDatatypesDecoder.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/xmldsig/xmldsigEXIDatatypesDecoder.h" />
+		<Unit filename="../src/xmldsig/xmldsigEXIDatatypesEncoder.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/xmldsig/xmldsigEXIDatatypesEncoder.h" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
