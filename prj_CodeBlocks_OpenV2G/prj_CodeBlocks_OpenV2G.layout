@@ -1,25 +1,40 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_layout_file>
 	<ActiveTarget name="Debug" />
-	<File name="..\src\appHandshake\appHand_DataDeserialization.c" open="1" top="0" tabpos="1">
-		<Cursor position="6389" topLine="230" />
+	<File name="../src/codec/EXIDecoder.c" open="0" top="0" tabpos="0">
+		<Cursor position="84060" topLine="1987" />
 	</File>
-	<File name="..\src\appHandshake\appHand_DataSerialization.c" open="0" top="0" tabpos="0">
-		<Cursor position="9641" topLine="368" />
+	<File name="../src/codec/QNames.c" open="0" top="0" tabpos="0">
+		<Cursor position="38328" topLine="930" />
 	</File>
-	<File name="..\src\service\v2g_serviceClientStubs.c" open="1" top="0" tabpos="4">
-		<Cursor position="5690" topLine="200" />
+	<File name="../src/service/v2g_serviceClientStubs.c" open="0" top="0" tabpos="0">
+		<Cursor position="4854" topLine="179" />
 	</File>
-	<File name="..\src\service\v2g_serviceDispatcher.c" open="1" top="0" tabpos="3">
-		<Cursor position="88053" topLine="2473" />
+	<File name="../src/service/v2g_serviceClientStubs.h" open="0" top="0" tabpos="0">
+		<Cursor position="2133" topLine="64" />
 	</File>
-	<File name="..\src\test\main.c" open="1" top="0" tabpos="5">
-		<Cursor position="1397" topLine="0" />
+	<File name="../src/service/v2g_serviceDataSerialization.c" open="0" top="0" tabpos="0">
+		<Cursor position="18149" topLine="740" />
 	</File>
-	<File name="..\src\test\main_codec.c" open="1" top="0" tabpos="2">
-		<Cursor position="4664" topLine="135" />
+	<File name="../src/service/v2g_serviceDispatcher.c" open="0" top="0" tabpos="0">
+		<Cursor position="68155" topLine="1802" />
 	</File>
-	<File name="..\src\test\pev_service.c" open="1" top="1" tabpos="6">
-		<Cursor position="27916" topLine="770" />
+	<File name="../src/test/evse_server.c" open="0" top="0" tabpos="0">
+		<Cursor position="0" topLine="137" />
+	</File>
+	<File name="../src/test/evse_serviceMethods.c" open="0" top="0" tabpos="0">
+		<Cursor position="1151" topLine="7" />
+	</File>
+	<File name="../src/test/main.c" open="0" top="0" tabpos="0">
+		<Cursor position="1213" topLine="0" />
+	</File>
+	<File name="../src/test/main.h" open="0" top="0" tabpos="0">
+		<Cursor position="668" topLine="0" />
+	</File>
+	<File name="../src/test/main_codec.c" open="0" top="0" tabpos="0">
+		<Cursor position="5773" topLine="195" />
+	</File>
+	<File name="../src/test/pev_service.c" open="0" top="0" tabpos="0">
+		<Cursor position="8194" topLine="215" />
 	</File>
 </CodeBlocks_layout_file>
