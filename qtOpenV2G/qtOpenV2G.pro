@@ -1,13 +1,13 @@
-QT += core
-QT -= gui
+#QT += core
+#QT -= gui
 
-CONFIG += c++11
+#CONFIG += c++11
 
 TARGET = qtOpenV2G
-CONFIG += console
+#CONFIG += console
 CONFIG -= app_bundle
 
-TEMPLATE = app
+TEMPLATE = lib
 
 SOURCES +=
 

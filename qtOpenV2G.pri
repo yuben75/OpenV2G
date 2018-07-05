@@ -14,7 +14,7 @@ INCLUDEPATH += $$MY_ROOT \
 
 SOURCES += \
     $$MY_ROOT/src/test/main_databinder.c \
-    $$MY_ROOT/src/test/main.c
+    #$$MY_ROOT/src/test/main.c
 
 HEADERS += \
     $$MY_ROOT/src/test/main.h
