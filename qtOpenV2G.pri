@@ -3,12 +3,21 @@
 MY_ROOT = N:/svn/GIT_PRJ/OpenV2G/
 ###################################################
 DEPENDPATH += $$MY_ROOT \
+    $$MY_ROOT/src/test \
     $$MY_ROOT/src/codec \
     $$MY_ROOT/src/xmldsig
 
 INCLUDEPATH += $$MY_ROOT \
+    $$MY_ROOT/src/test \
     $$MY_ROOT/src/codec \
     $$MY_ROOT/src/xmldsig
+
+SOURCES += \
+    $$MY_ROOT/src/test/main_databinder.c \
+    $$MY_ROOT/src/test/main.c
+
+HEADERS += \
+    $$MY_ROOT/src/test/main.h
 
 SOURCES += \
     $$MY_ROOT/src/codec/AbstractDecoderChannel.c \
